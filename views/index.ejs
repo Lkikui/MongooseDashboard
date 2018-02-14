@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wolf Dashboard</title>
+</head>
+
+<body>
+    <h1>Wolves:</h1>
+    <% for (var wolf in wolves) { %>
+        <p>Name: <%= wolves[wolf].name %></p>
+        <a href="/wolves/<%= wolves[wolf].id %>" >More Info </a> --
+        <a href="/wolves/edit/<%= wolves[wolf].id %>" >Edit</a> --
+        
+        <form action="/wolves/destroy/<%= wolves[wolf].id %>" method="post">
+            <input type="submit" value="Destroy">
+        </form>
+        <hr>
+    <% } %>
+    <button><a href="/new">Add a wolf</a></button>
+</body>
+
+</html>

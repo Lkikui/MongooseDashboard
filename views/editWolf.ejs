@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit <%= wolf.name %></title>
+</head>
+
+<body>
+    <h1>Edit <%= wolf.name %></h1>
+    <form action="/editWolf/<%= wolf.id %>" method="post">
+        <p>Name: <input type="text" value="<%= wolf.name %>" name="name" id="name"></p>
+        <p>Age: <input type="text" value="<%= wolf.age %>" name="age" id="age"></p>
+        <p>Weight: <input type="text" value="<%= wolf.weight %>" name="weight" id="weight"></p>
+        <button><a href="/">Go Back</a></button>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
